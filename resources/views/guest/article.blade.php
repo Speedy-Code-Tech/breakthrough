@@ -4,7 +4,8 @@
     <div class="mainContainer">
         <div class="container-fluid d-flex flex-column justify-content-center align-items-center">
             <div class="container-fluid d-flex justify-content-center align-items-center pt-2">
-                <img src="{{ asset('/assets/images/trending.png') }}" alt="" style="width: 200px">
+                <img src="{{ asset('/assets/images/trendings.png') }}" alt="" style="width: 200px">
+
             </div>
             <div class="container-fluid d-flex justify-content-center align-items-center pt-2">
                 @if ($latest)

@@ -22,7 +22,7 @@
                             <input type="text" class="form-control ms-5 @error('name') is-invalid @enderror" value="{{ old('name') }}" required autocomplete="name" autofocus name="name" id="username">
                         </div>
                         <div class="col d-flex gap-2 justify-content-center align-items-center">
-                            <p class="p-0 m-0 fw-bold text-white">Username:</p>
+                            <p class="p-0 m-0 fw-bold text-white">Email:</p>
                             <input type="text" class="form-control ms-3 @error('email') is-invalid @enderror" value="{{ old('email') }}" required autocomplete="email" autofocus name="email" id="username">
                         </div>
                         <div class="col d-flex gap-2 justify-content-center align-items-center">

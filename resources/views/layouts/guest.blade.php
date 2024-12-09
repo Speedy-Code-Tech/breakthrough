@@ -43,6 +43,7 @@
 
         <div class="container-fluid d-flex flex-column mb-2">
             <div class="title">
+            <div class="title">
                 <div class="row"></div>
                 <div class="row d-flex align-items-end">
                     <div class="col-3 p-0 ps-2 pb-1 m-0 text-start fw-bold">
@@ -124,6 +125,7 @@
                     </a>
                     <!-- Facebook -->
                     <a href="https://www.facebook.com/BreakthroughPub" target="_blank"
+                    <a href="https://www.facebook.com/BreakthroughPub" target="_blank"
                         class="col d-flex gap-2 text-decoration-none text-white">
                         <img src="{{ asset('/assets/images/facebook.png') }}" style="width: 25px; height: 25px;"
                             alt="">
@@ -152,7 +154,7 @@
             $('#myTable').DataTable();
         });
     </script>
-
+    
 </body>
 
 </html>
