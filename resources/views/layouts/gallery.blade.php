@@ -9,11 +9,11 @@
                     ALBUM
                 </p>
                 <div class="whiteLine mb-3"></div>
-                @foreach ($gallery as $item)
-                    <a href="{{ route('gallery.view', ['id' => $item->id]) }}" class="text-white pb-2"
+                @foreach ($gallery as $items)
+                    <a href="{{ route('gallery.view', ['id' => $items->id]) }}" class="gal {{$item->name==$items->name?'galactive':''}}"
                         style="text-decoration: none; cursor: pointer;">
-                    <p class="m-0 p-0 ps-4 text-white"style="font-family: 'Inter'">
-                        {{ $item->name }}
+                    <p class="m-0 p-0 ps-4"style="font-family: 'Inter'">
+                        {{ $items->name }}
                     </p>
                 </a>
                 @endforeach

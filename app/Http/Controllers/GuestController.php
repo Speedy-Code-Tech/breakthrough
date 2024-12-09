@@ -32,7 +32,7 @@ class GuestController extends Controller
             case 'Sports':
                 $modal = new Sports();
                 break;
-            case 'Announcements':
+            case 'Literary':
                 $modal = new Announcements();
                 break;
             case 'Event':
@@ -66,7 +66,7 @@ class GuestController extends Controller
             case 'Sports':
                 $modal = new Sports();
                 break;
-            case 'Announcements':
+            case 'Literary':
                 $modal = new Announcements();
                 break;
             case 'Event':
