@@ -32,11 +32,14 @@
                     <li class="{{ Request::routeIs('admin.home') ? 'activeNav' : '' }}">
                         <a href="{{ route('admin.home') }}">Dashboard</a>
                     </li>
+                    <li class="{{ Request::routeIs('request.index') ? 'activeNav' : '' }}">
+                        <a href="{{ route('request.index') }}">Request</a>
+                    </li>
                     <li class="{{ Request::routeIs('news.index') ? 'activeNav' : '' }}">
                         <a href="{{ route('news.index') }}">News</a>
                     </li>
                     <li class="{{ Request::routeIs('announcement.index') ? 'activeNav' : '' }}">
-                        <a href="{{ route('announcement.index') }}">Announcements</a>
+                        <a href="{{ route('announcement.index') }}">Literary    </a>
                     </li>
                     <li class="{{ Request::routeIs('sports.index') ? 'activeNav' : '' }}">
                         <a href="{{ route('sports.index') }}">Sports</a>

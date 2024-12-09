@@ -4,7 +4,8 @@
     <div class="mainContainer">
         <div class="container-fluid d-flex flex-column justify-content-center align-items-center">
             <div class="container-fluid d-flex justify-content-center align-items-center pt-2">
-                <img src="{{ asset('/assets/images/trending.png') }}" alt="" style="width: 200px">
+                <img src="{{ asset('/assets/images/trendings.png') }}" alt="" style="width: 200px">
+
             </div>
             <div class="container-fluid d-flex justify-content-center align-items-center pt-2">
                 @if ($latest)
@@ -50,11 +51,11 @@
                                         <h5 style="font-family: 'Inter'">{{ $item->name }}</h5>
                                         @php
                                             $maxWords = 90; // Set your maximum word limit
-                                            $words = explode(' ', $latest->description); // Split the text into words
+                                            $words = explode(' ', $item->description); // Split the text into words
                                             $truncatedText =
                                                 count($words) > $maxWords
                                                     ? implode(' ', array_slice($words, 0, $maxWords)) . '...'
-                                                    : $latest->description; // Truncate and append ellipsis if word count exceeds maxWords
+                                                    : $item->description; // Truncate and append ellipsis if word count exceeds maxWords
                                         @endphp
 
                                         <p class="m-0" style="text-align: justify">{{ $truncatedText }}</p>

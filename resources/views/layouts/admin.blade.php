@@ -38,7 +38,7 @@
                         <span class="text-nowrap">@breakthroughpub</span>
                     </a>
                     <!-- Facebook -->
-                    <a href="https://www.facebook.com/breakthroughcnsc" target="_blank" class="col d-flex gap-2 text-decoration-none text-white">
+                    <a href="https://www.facebook.com/BreakthroughPub" target="_blank" class="col d-flex gap-2 text-decoration-none text-white">
                         <img src="{{ asset('/assets/images/facebook.png') }}" style="width: 25px; height: 25px;"
                             alt="">
                         <span class="text-nowrap">Breakthrough - CNSC</span>

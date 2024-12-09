@@ -42,36 +42,53 @@
         @endif
 
         <div class="container-fluid d-flex flex-column mb-2">
-            <div class="title pb-3">
+            <div class="title">
                 <div class="row"></div>
-                <div class="row d-flex align-items-center">
+                <div class="row d-flex align-items-end">
                     <div class="col-3 p-0 ps-2 m-0 text-start fw-bold">
                         {{ \Carbon\Carbon::now()->format('F j, Y h:i A') }}
                     </div>
-                    <div class="col-6 p-0 m-0 text-center">
-                        <img src="{{ asset('assets/images/tagline.png') }}" alt="" class="taglineAdmin">
+                    <div class="col-6 p-0 m-0 text-center pb-3">
+                        <img src="{{ asset('assets/images/tagline.png') }}" style="width:500px;" alt="" class="taglineAdmin">
                     </div>
                 </div>
             </div>
             <div class="line"></div>
             <div class="navs">
-                <ul class="navigation">
-                    <li class="nav-itemss actives"><a href="{{ route('home') }}" class="items">HOME</a></li>
-                    <li class="nav-itemss"><a href="{{ route('article', ['type' => 'News']) }}">NEWS</a></li>
-                    <li class="nav-itemss"><a
-                            href="{{ route('article', ['type' => 'Announcements']) }}">ANNOUNCEMENTS</a>
-                    </li>
-                    <li class="nav-itemss"><a href="{{ route('article', ['type' => 'Sports']) }}">SPORTS</a></li>
-                    <li class="nav-itemss"><a
-                            href="{{ route('article', ['type' => 'Entertainment']) }}">ENTERTAINMENT</a>
-                    </li>
-                    <li class="nav-itemss"><a href="{{ route('gallery') }}">GALLERY</a></li>
-                    <li class="nav-itemss"><a href="{{ route('article', ['type' => 'Event']) }}">EVENTS</a></li>
-                    <li class="nav-itemss"><a href="{{ route('article', ['type' => 'Lifestyle']) }}">LIFESTYLE</a></li>
-                    <li class="nav-itemss"><a href="{{ route('about') }}">ABOUT US</a></li>
-                    <li class="nav-itemss"><a href="{{ route('request') }}">SERVICE REQUEST</a></li>
-                </ul>
-            </div>
+    <ul class="navigation">
+        <li class="nav-itemss {{ Request::routeIs('home') ? 'actives' : '' }}">
+            <a href="{{ route('home') }}" class="items">HOME</a>
+        </li>
+        <li class="nav-itemss {{ Request::routeIs('article') && $title == 'News' ? 'actives' : '' }}">
+            <a href="{{ route('article', ['type' => 'News']) }}">NEWS </a>
+        </li>
+        <li class="nav-itemss {{ Request::routeIs('article') && $title == 'LITERARY' ? 'actives' : '' }}">
+            <a href="{{ route('article', ['type' => 'LITERARY']) }}">LITERARY</a>
+        </li>
+        <li class="nav-itemss {{ Request::routeIs('article') && $title == 'Sports' ? 'actives' : '' }}">
+            <a href="{{ route('article', ['type' => 'Sports']) }}">SPORTS</a>
+        </li>
+        <li class="nav-itemss {{ Request::routeIs('article') && $title == 'Entertainment' ? 'actives' : '' }}">
+            <a href="{{ route('article', ['type' => 'Entertainment']) }}">ENTERTAINMENT</a>
+        </li>
+        <li class="nav-itemss {{ Request::routeIs('gallery')|| Route::currentRouteName()=='gallery.view' ? 'actives' : '' }}">
+            <a href="{{ route('gallery') }}">GALLERY</a>
+        </li>
+        <li class="nav-itemss {{ Request::routeIs('article') && $title == 'Event' ? 'actives' : '' }}">
+            <a href="{{ route('article', ['type' => 'Event']) }}">EVENTS</a>
+        </li>
+        <li class="nav-itemss {{ Request::routeIs('article') && $title == 'Lifestyle' ? 'actives' : '' }}">
+            <a href="{{ route('article', ['type' => 'Lifestyle']) }}">LIFESTYLE</a>
+        </li>
+        <li class="nav-itemss {{ Request::routeIs('about') ? 'actives' : '' }}">
+            <a href="{{ route('about') }}">ABOUT US</a>
+        </li>   
+        <li class="nav-itemss {{ Request::routeIs('request') ? 'actives' : '' }}">
+            <a href="{{ route('request') }}">SERVICE REQUEST</a>
+        </li>
+    </ul>
+</div>
+
             @yield('main')
 
         </div>
@@ -99,7 +116,7 @@
                         <span class="text-nowrap">@breakthroughpub</span>
                     </a>
                     <!-- Facebook -->
-                    <a href="https://www.facebook.com/breakthroughcnsc" target="_blank"
+                    <a href="https://www.facebook.com/BreakthroughPub" target="_blank"
                         class="col d-flex gap-2 text-decoration-none text-white">
                         <img src="{{ asset('/assets/images/facebook.png') }}" style="width: 25px; height: 25px;"
                             alt="">
@@ -128,7 +145,7 @@
             $('#myTable').DataTable();
         });
     </script>
-
+    
 </body>
 
 </html>

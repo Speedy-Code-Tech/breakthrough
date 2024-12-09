@@ -1,14 +1,14 @@
 @extends('layouts.adminPage')
 @section('main')
     <div class="container-fluid d-flex flex-column mb-2">
-        <div class="title pb-3">
+        <div class="title">
             <div class="row"></div>
-            <div class="row d-flex align-items-center">
+            <div class="row d-flex align-items-end pb-1">
                 <div class="col-3 p-0 ps-2 m-0 text-start fw-bold">
                     {{ \Carbon\Carbon::now()->format('F j, Y h:i A') }}
                 </div>
-                <div class="col-6 p-0 m-0 text-center">
-                    <img src="{{ asset('assets/images/tagline.png') }}" alt="" class="taglineAdmin">
+                <div class="col-6 pb-3 p-0 m-0 text-center">
+                    <img src="{{ asset('assets/images/tagline.png') }}" style="width: 500px; height:auto;" alt="" class="taglineAdmin">
                 </div>
             </div>
         </div>

@@ -23,19 +23,30 @@
 
 
 
-.nav-itemss > a {
-    
-    font-family: 'Inter',sans-serif;
-    font-size: 1em; /* Adjust the size as needed */
-    font-weight: bold; /* Makes the text bold */
-    background: linear-gradient(to right, #8B0000, #FF4500, #FF8C00); /* Adjust colors as needed */
-    -webkit-background-clip: text; /* Clips the background to the text */
-    -webkit-text-fill-color: transparent; /* Makes the text transparent to show the gradient */
-    text-transform: uppercase; /* Ensures the text is in uppercase */
-    text-decoration: none; /* Removes underline */
-    padding: 5px 15px; /* Adds padding for better spacing */
-    transition: background 0.3s, color 0.3s; /* Smooth transition */
-    border-radius: 5px; /* Adds rounded corners */
+.navigation>li>a {
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    color: #D55409;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 5px 15px;
+    transition: all 0.3s;
+    border-radius: 5px;
+}
+
+.navigation>.actives>a {
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    background-color: #D55409;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.3s;
+    border-radius: 5px;
 }
 
 
@@ -159,4 +170,14 @@
 }
 .gallery-item img:hover {
     transform: scale(1.1); /* Zoom effect */
+}
+
+.gal{
+    color: white;
+}
+.activesGallery{
+    color: #D55409;
+    background-color:white;
+    padding: 10px 20px;
+    border-radius: 10px;
 }
