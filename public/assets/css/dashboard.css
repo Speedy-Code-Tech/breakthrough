@@ -1,0 +1,162 @@
+.navs {
+    width: 100%;
+    border-bottom: 1px solid;
+    padding-top: 10px;
+}
+
+.navigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+}
+
+
+.items {
+    color: white;
+}
+
+
+
+.nav-itemss > a {
+    
+    font-family: 'Inter',sans-serif;
+    font-size: 1em; /* Adjust the size as needed */
+    font-weight: bold; /* Makes the text bold */
+    background: linear-gradient(to right, #8B0000, #FF4500, #FF8C00); /* Adjust colors as needed */
+    -webkit-background-clip: text; /* Clips the background to the text */
+    -webkit-text-fill-color: transparent; /* Makes the text transparent to show the gradient */
+    text-transform: uppercase; /* Ensures the text is in uppercase */
+    text-decoration: none; /* Removes underline */
+    padding: 5px 15px; /* Adds padding for better spacing */
+    transition: background 0.3s, color 0.3s; /* Smooth transition */
+    border-radius: 5px; /* Adds rounded corners */
+}
+
+
+.panelText{
+    font-family: 'Inter',sans-serif;
+    font-size: 1.25em; /* Adjust the size as needed */
+    font-weight: bold; /* Makes the text bold */
+    background: linear-gradient(to right, #8B0000, #FF4500, #FF8C00); /* Adjust colors as needed */
+    -webkit-background-clip: text; /* Clips the background to the text */
+    -webkit-text-fill-color: transparent; /* Makes the text transparent to show the gradient */
+    text-transform: uppercase; /* Ensures the text is in uppercase */
+    text-decoration: none; /* Removes underline */
+    text-align: start;
+}
+
+.panelBackground{
+    width: 100%;
+    background: url('../images/panel-background.png');
+    display: flex;
+    gap:20px;
+}
+
+.mainTabs{
+    width: 100%;
+    margin: 15px;
+    background-color: white;
+    padding: 20px;
+}
+
+
+.dashboardNav{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    font-family: 'Inter',sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    align-items: start;
+    height: 500px;
+    justify-content: space-evenly;
+    /* height: 100%; */
+
+}
+
+.dashboardNav li a{
+    text-decoration: none;
+    color: white;
+}
+
+.logoPage{
+    height: 100%;
+}
+
+.activeNav{
+    /* background-color:white; */
+    padding: 10px 20px;
+}
+.dashboardNav .activeNav a{
+    text-decoration: none;
+    color: #D55409;
+
+}
+
+.activeNav{
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+.mainContainer{
+    width: 100%;
+    height: 100%;
+}
+
+.galleryNav{
+    background: url('../images/gallery.png');
+    width: 250px;
+    min-height: 50vh;
+}
+
+.whiteLine{
+    height: 5px;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    width: 100%;
+}
+
+.gallery{
+    height: 70vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+    height: 12px; /* Height of the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f4f4f4; /* Track color (light background for contrast) */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #FF8C00; /* Dark orange */
+    border-radius: 6px; /* Rounded corners */
+    border: 3px solid #f4f4f4; /* Space around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #e67300; /* Slightly darker orange on hover */
+}
+
+.gallerys {
+    background-color: #f8f9fa; /* Light background */
+    min-height: 100vh;
+}
+.gallery-item img {
+    transition: transform 0.2s ease-in-out;
+}
+.gallery-item img:hover {
+    transform: scale(1.1); /* Zoom effect */
+}
