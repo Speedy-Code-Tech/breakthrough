@@ -19,7 +19,7 @@
                             <div class="col d-flex gap-1 flex-column justify-content-center align-items-center">
 
                                 <div class="container-fluid d-flex gap-2 justify-content-center align-items-center">
-                                    <p class="p-0 m-0 fw-bold text-white">Email:</p>
+                                    <p class="ps-0 py-0 m-0 fw-bold text-white" style="padding-right: 35px;">Email:</p>
                                     <input type="text" class="form-control @error('email') is-invalid @enderror"
                                         value="{{ old('email') }}" required autocomplete="email" autofocus name="email"
                                         id="username">

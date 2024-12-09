@@ -183,13 +183,3 @@
 .gallery-item img:hover {
     transform: scale(1.1); /* Zoom effect */
 }
-
-.gal{
-    color: white;
-}
-.activesGallery{
-    color: #D55409;
-    background-color:white;
-    padding: 10px 20px;
-    border-radius: 10px;
-}
