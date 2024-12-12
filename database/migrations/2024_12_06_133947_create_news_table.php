@@ -11,13 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('news', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->text('description');
-            $table->string('image_path');
-            $table->timestamps();
-        });
+        if (!Schema::hasTable('news')) {
+
+            Schema::create('news', function (Blueprint $table) {
+                $table->id();
+                $table->string('name');
+                $table->text('description');
+                $table->string('image_path');
+                $table->timestamps();
+            });
+        }
     }
 
     /**

@@ -11,22 +11,25 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('service_requests', function (Blueprint $table) {
-            $table->id();
-            $table->string('requesting_party');
-            $table->string('mobile_number'); 
-            $table->string('email_address'); 
-            $table->string('activity_title'); 
-            $table->string('coverage')->nullable();
-            $table->text('event_description'); 
-            $table->text('program_highlights'); 
-            $table->date('date'); 
-            $table->time('time'); 
-            $table->string('venue'); 
-            $table->string('status')->nullable(); 
-            $table->text('notes')->nullable(); 
-            $table->timestamps();
-        });
+        if (!Schema::hasTable('service_requests')) {
+
+            Schema::create('service_requests', function (Blueprint $table) {
+                $table->id();
+                $table->string('requesting_party');
+                $table->string('mobile_number');
+                $table->string('email_address');
+                $table->string('activity_title');
+                $table->string('coverage')->nullable();
+                $table->text('event_description');
+                $table->text('program_highlights');
+                $table->date('date');
+                $table->time('time');
+                $table->string('venue');
+                $table->string('status')->nullable();
+                $table->text('notes')->nullable();
+                $table->timestamps();
+            });
+        }
     }
 
     /**

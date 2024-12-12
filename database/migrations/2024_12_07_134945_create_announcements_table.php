@@ -11,19 +11,22 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('announcements', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->string('name');
-            $table->text('description');
-            $table->string('image_path');
-            $table->string('status');
-            $table->foreign('user_id')
-            ->references('id')
-            ->on('users')
-            ->onDelete('cascade');
-            $table->timestamps();
-        });
+        if (!Schema::hasTable('announcements')) {
+
+            Schema::create('announcements', function (Blueprint $table) {
+                $table->id();
+                $table->unsignedBigInteger('user_id');
+                $table->string('name');
+                $table->text('description');
+                $table->string('image_path');
+                $table->string('status');
+                $table->foreign('user_id')
+                    ->references('id')
+                    ->on('users')
+                    ->onDelete('cascade');
+                $table->timestamps();
+            });
+        }
     }
 
     /**

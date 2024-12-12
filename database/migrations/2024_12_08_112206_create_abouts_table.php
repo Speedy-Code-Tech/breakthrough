@@ -11,20 +11,23 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('abouts', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->string("fname");
-            $table->string("mname");
-            $table->string("lname");
-            $table->string("position");
-            $table->string("image_path");
-            $table->foreign('user_id')
-            ->references('id')
-            ->on('users')
-            ->onDelete('cascade');
-            $table->timestamps();
-        });
+        if (!Schema::hasTable('abouts')) {
+
+            Schema::create('abouts', function (Blueprint $table) {
+                $table->id();
+                $table->unsignedBigInteger('user_id');
+                $table->string("fname");
+                $table->string("mname");
+                $table->string("lname");
+                $table->string("position");
+                $table->string("image_path");
+                $table->foreign('user_id')
+                    ->references('id')
+                    ->on('users')
+                    ->onDelete('cascade');
+                $table->timestamps();
+            });
+        }
     }
 
     /**

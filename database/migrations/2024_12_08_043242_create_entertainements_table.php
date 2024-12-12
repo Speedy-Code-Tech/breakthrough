@@ -11,20 +11,23 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('entertainements', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->string('name');
-            $table->text('description');
-            $table->string('image_path');
-            $table->string('status');
-            $table->string('hashtag')->nullable();
-            $table->foreign('user_id')
-            ->references('id')
-            ->on('users')
-            ->onDelete('cascade');
-            $table->timestamps();
-        });
+        if (!Schema::hasTable('entertainements')) {
+
+            Schema::create('entertainements', function (Blueprint $table) {
+                $table->id();
+                $table->unsignedBigInteger('user_id');
+                $table->string('name');
+                $table->text('description');
+                $table->string('image_path');
+                $table->string('status');
+                $table->string('hashtag')->nullable();
+                $table->foreign('user_id')
+                    ->references('id')
+                    ->on('users')
+                    ->onDelete('cascade');
+                $table->timestamps();
+            });
+        }
     }
 
     /**

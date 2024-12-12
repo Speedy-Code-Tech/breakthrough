@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="adminHeader">
         <div class="container-fluid d-flex justify-content-end align-items-center">
             <!-- Dropdown for logout -->
             <div class="dropdown ">

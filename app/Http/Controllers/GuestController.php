@@ -22,23 +22,24 @@ class GuestController extends Controller
     public function article($type)
     {
         $modal = null;
-        switch ($type) {
-            case 'News':
+        $lower = strtolower($type);
+        switch ($lower) {
+            case 'news':
                 $modal = new News();
                 break;
-            case 'Entertainment':
+            case 'entertainment':
                 $modal = new Entertainement();
                 break;
-            case 'Sports':
+            case 'sports':
                 $modal = new Sports();
                 break;
-            case 'Literary':
+            case 'literary':
                 $modal = new Announcements();
                 break;
-            case 'Event':
+            case 'event':
                 $modal = new Event();
                 break;
-            case 'Lifestyle':
+            case 'lifestyle':
                 $modal = new Lifestyle();
                 break;
         }
@@ -56,23 +57,24 @@ class GuestController extends Controller
     public function newsview($type, $id)
     {
         $modal = null;
-        switch ($type) {
-            case 'News':
+        $lower = strtolower($type);
+        switch ($lower) {
+            case 'news':
                 $modal = new News();
                 break;
-            case 'Entertainment':
+            case 'entertainment':
                 $modal = new Entertainement();
                 break;
-            case 'Sports':
+            case 'sports':
                 $modal = new Sports();
                 break;
-            case 'Literary':
+            case 'literary':
                 $modal = new Announcements();
                 break;
-            case 'Event':
+            case 'event':
                 $modal = new Event();
                 break;
-            case 'Lifestyle':
+            case 'lifestyle':
                 $modal = new Lifestyle();
                 break;
         }

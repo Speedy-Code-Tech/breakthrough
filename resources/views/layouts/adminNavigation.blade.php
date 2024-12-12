@@ -32,7 +32,8 @@
                     <li class="{{ Request::routeIs('admin.home') ? 'activeNav' : '' }}">
                         <a href="{{ route('admin.home') }}">Dashboard</a>
                     </li>
-                    <li class="{{ Request::routeIs('request.index') ? 'activeNav' : '' }}">
+                    <li class="{{ Request::routeIs('request.index')|| Request::routeIs('request.view') ? 'activeNav' : '' }}">
+                        
                         <a href="{{ route('request.index') }}">Request</a>
                     </li>
                     <li class="{{ Request::routeIs('news.index') ? 'activeNav' : '' }}">

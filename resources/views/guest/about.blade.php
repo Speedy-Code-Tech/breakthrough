@@ -7,7 +7,8 @@
                 <div class="col-3 d-flex flex-column gap-2 justify-content-center align-items-center">
                     <img src="{{ asset('/assets/images/logo.png') }}" alt=""
                         style="width: 150px; height: 150px; object-fit: contain;">
-                    <p class="m-0 p-0 text-center">
+                    <p class="text-center px-3" style="font-size: 1.25em; font-style: italic; color: #D55409; font-family: 'Inter' sans-serif; font-weight: bolder;">"MAGNA EST VERITAS EST SUPREMA LEX ESTO"</p>
+                        <p class="m-0 p-0 text-center">
                         Breakthrough - CNSC is the official publication of Camarines Norte State College, dedicated to
                         providing a platform for creative expression, responsible journalism, and student engagement. As a
                         beacon of truth and innovation, we aim to inform, inspire, and empower the CNSC community through

@@ -10,6 +10,7 @@ use App\Http\Controllers\GuestController;
 use App\Http\Controllers\LifestyleController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\RequestController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\SportsController;
 use App\Models\Request;
 use Illuminate\Support\Facades\Route;
@@ -105,6 +106,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     // Request
     Route::prefix('request')->name('request.')->group(function () {
         Route::get('/', [RequestController::class, 'index'])->name('index');
+        Route::get('/view/{id}', [RequestController::class, 'view'])->name('view');
         Route::get('/edit/{id}/{status}', [RequestController::class, 'edit'])->name('edit');
     });
 });
@@ -119,3 +121,5 @@ Route::get('/gallery/{id}',[GuestController::class,'galleryView'])->name('galler
 Route::get('/about',[GuestController::class,'about'])->name('about');
 Route::get('/request',[GuestController::class,'request'])->name('request');
 Route::post('/request',[GuestController::class,'submitRequest'])->name('request.submit');
+
+Route::get('/search',[SearchController::class,'search'])->name('search');
